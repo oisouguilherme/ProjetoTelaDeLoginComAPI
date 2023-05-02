@@ -18,7 +18,7 @@ export default function Login() {
       if (!response.ok) {
         const error = await response.json()
         setError(error.message)
-        alert("Usuário não encontrado")
+        alert("Usuário ou senha incorreta")
       } else {
         const { token } = await response.json()
         localStorage.setItem('token', token)
