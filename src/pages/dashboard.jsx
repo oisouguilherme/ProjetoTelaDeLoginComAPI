@@ -55,7 +55,6 @@ const DashBoard = () => {
         {objetos.length > 0 ? (
           objetos.map((objeto) => (
             <li key={objeto.id}>
-              {" "}
               <p> <span className="font-medium">Nome: </span>{objeto.nome}</p> 
               <p> <span className="font-medium">CNPJ: </span>{objeto.cnpj}</p>
               <p><span>Criado em: {objeto.criadoEm}</span></p>
