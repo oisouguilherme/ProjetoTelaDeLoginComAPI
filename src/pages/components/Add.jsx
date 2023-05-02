@@ -29,9 +29,9 @@ const Cadastro = () => {
     });
 
     if (response.ok) {
-      Alert('Cadastro realizado com sucesso!');
+      alert("Cadastro realizado com sucesso!");
     } else {
-      Alert('Erro ao realizar cadastro');
+      alert("Erro ao realizar cadastro");
     }
     setLoading(false);
   };
