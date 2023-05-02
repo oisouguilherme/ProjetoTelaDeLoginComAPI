@@ -14,6 +14,11 @@ const Cadastro = () => {
       Authorization: `Bearer ${token}`,
     };
 
+    if (!cnpj || !nome) {
+      alert('Por favor, preencha todos os campo CNPJ');
+      setLoading(false);
+      return;
+    }
     const data = {
       nome,
       cnpj,
@@ -54,6 +59,7 @@ const Cadastro = () => {
           <input 
           className='bg-gray-400 p-2 rounded-md' 
           type="text" 
+          required="true"
           value={cnpj} 
           onChange={(e) => 
           setCnpj(e.target.value)} />
